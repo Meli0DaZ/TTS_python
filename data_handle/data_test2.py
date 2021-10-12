@@ -21,7 +21,7 @@ db = mysql.connector.connect(
     database="no_data"
 )
 mycursor = db.cursor()
-sql = "CREATE TABLE custormer(" \
+sql = "CREATE TABLE IF NOT EXISTS custormer(" \
       "customerid INT(10) UNSIGNED PRIMARY KEY," \
       "firstname VARCHAR(20),lastname VARCHAR(20)," \
       "companyname VARCHAR(50)," \
